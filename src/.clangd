@@ -1,0 +1,3 @@
+CompileFlags: 
+  Add: [-I~/useless/DesktopAssistant/modified/include/, -std=c++20] 
+
