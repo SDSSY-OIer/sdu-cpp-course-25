@@ -1,0 +1,72 @@
+#---------------------------------------------------------------------
+# 生成文件 / 临时文件
+#---------------------------------------------------------------------
+/build*/          # 常见 out‑of‑source 构建目录：build, build-debug, build-release ...
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+/compile_commands.json
+
+# Ninja
+/.ninja_deps
+/.ninja_log
+
+# Visual Studio (CMake 可生成 VS 工程)
+*.vcxproj*
+*.pdb
+*.sln
+*.user
+*.opensdf
+*.log
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+
+#---------------------------------------------------------------------
+# 编译产物
+#---------------------------------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.run
+
+#---------------------------------------------------------------------
+# 编辑器 / IDE 临时文件
+#---------------------------------------------------------------------
+# Vim
+*.swp
+*.swo
+.*.sw?
+# VSCode
+.vscode/
+# CLion / JetBrains
+.idea/
+# QtCreator
+*.pro.user
+# Sublime
+*.sublime*
+# Emacs
+*~
+.#*
+# Mac 特有
+.DS_Store
+
+#---------------------------------------------------------------------
+# 依赖缓存（若有 vcpkg / Conan / Hunter 等）
+#---------------------------------------------------------------------
+/vcpkg_installed/
+/_conan/
+.conan/
+build/.conan*
+.hunter/
+
