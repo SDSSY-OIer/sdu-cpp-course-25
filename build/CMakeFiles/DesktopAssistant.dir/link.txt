@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/DesktopAssistant.dir/link.d CMakeFiles/DesktopAssistant.dir/src/Crypto.cpp.o CMakeFiles/DesktopAssistant.dir/src/DesktopAssistant.cpp.o CMakeFiles/DesktopAssistant.dir/src/Utils.cpp.o CMakeFiles/DesktopAssistant.dir/src/main.cpp.o -o DesktopAssistant  /usr/lib/libcrypto.so
