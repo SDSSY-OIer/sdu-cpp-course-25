@@ -1,7 +1,0 @@
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/DesktopAssistant.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/edit_cache.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/rebuild_cache.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/list_install_components.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/install.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/install/local.dir
-/home/xhyh/useless/DesktopAssistant/modified/build/CMakeFiles/install/strip.dir

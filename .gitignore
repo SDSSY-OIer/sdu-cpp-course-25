@@ -1,7 +1,8 @@
 #---------------------------------------------------------------------
 # 生成文件 / 临时文件
 #---------------------------------------------------------------------
-/build*/          # 常见 out‑of‑source 构建目录：build, build-debug, build-release ...
+# 常见 out‑of‑source 构建目录：build, build-debug, build-release ...
+build/
 /CMakeFiles/
 /CMakeCache.txt
 /cmake_install.cmake
