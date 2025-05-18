@@ -137,7 +137,9 @@ void DesktopAssistant::savePasswordData() { save_records(passwordFile, passwordR
 void DesktopAssistant::addFinance()
 {
     string d,c; double a;
-    cout << "日期(留空=今天): "; getline(cin,d); if(d.empty()) d = getCurrentDate();
+    cout << "日期(YYYY-MM-DD, 留空=今天): "; getline(cin,d);
+    if(d.empty()) d = getCurrentDate();
+    else d = normalizeDate(d); 
     cout << "金额: ";           cin >> a; cin.ignore(numeric_limits<streamsize>::max(),'\n');
     cout << "类别: ";           getline(cin,c);
 
@@ -149,8 +151,9 @@ void DesktopAssistant::addFinance()
 void DesktopAssistant::queryFinanceByMonth(const string& month) const
 {
     cout << left << setw(14) << "日期" << setw(14) << "金额" << "类别\n";
+    auto month_nor = normalizeMonth(month);
     for (const auto& r : financeRecords)
-        if (r->getDate().rfind(month,0)==0) r->display();
+        if (r->getDate().rfind(month_nor,0)==0) r->display();
 }
 
 //void DesktopAssistant::addReminder()
@@ -172,6 +175,14 @@ void DesktopAssistant::addReminder()
     std::cout << "日期时间(YYYY-MM-DD HH:MM, 留空=当前): ";
     std::getline(std::cin, dt);
     if (dt.empty()) dt = getCurrentDateTime();
+    else {
+         // 仅规范化日期部分，时间保持原样
+         auto sp = dt.find(' ');
+         if (sp != std::string::npos)
+             dt = normalizeDate(dt.substr(0, sp)) + dt.substr(sp);
+         else
+             dt = normalizeDate(dt);
+    }
 
     std::cout << "内容: ";
     std::getline(std::cin, content);
@@ -192,8 +203,10 @@ void DesktopAssistant::addReminder()
 void DesktopAssistant::queryReminderByDate(const string& date) const
 {
     cout << left << setw(34) << "日期时间" << "内容\n";
+    // 仅规范化日期部分
+    auto date_nor = normalizeDate(date);
     for (const auto& r : reminderRecords)
-        if (r->getDatetime().rfind(date,0)==0) r->display();
+        if (r->getDatetime().rfind(date_nor,0)==0) r->display();
 }
 
 void DesktopAssistant::addPassword()
